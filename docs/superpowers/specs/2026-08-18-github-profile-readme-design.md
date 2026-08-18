@@ -63,7 +63,7 @@ github꾸미기/                          ← git 저장소 (원격: world-oooo/
 
 ## 5. README 구성
 
-위에서 아래로 9개 블록:
+위에서 아래로 12개 블록:
 
 | # | 블록 | 구현 | 움직임 | 의존 |
 |---|---|---|---|---|
@@ -77,7 +77,7 @@ github꾸미기/                          ← git 저장소 (원격: world-oooo/
 | 8 | 방문자 카운터 | komarev | — | 외부 |
 | 9 | 푸터 웨이브 | capsule-render | ✅ | 외부 |
 
-블록 8과 9 사이에 **통계 위젯 주석 블록**(§7)이 위치한다.
+블록 11과 12 사이에 **통계 위젯 주석 블록**(§7)이 위치한다.
 
 **외부 의존은 komarev와 capsule-render 두 개뿐이다.** 둘 다 실패해도 README의 뼈대(헤더·터미널·뱃지)는 그대로 유지된다.
 
@@ -130,16 +130,20 @@ github꾸미기/                          ← git 저장소 (원격: world-oooo/
 
 **뱃지 구성 및 색상**
 
-| 행 | 뱃지 | logoColor | 비고 |
-|---|---|---|---|
-| LEARNING | HTML5 | `#E34F26` | 브랜드 원본 |
-| | CSS3 | `#663399` | 브랜드 원본 |
-| | JavaScript | `#F7DF1E` | 브랜드 원본 |
-| | React | `#61DAFB` | 브랜드 원본 |
-| | Python | `#3776AB` | 브랜드 원본 |
-| TOOLS | Git | `#F03C2E` | 브랜드 원본 |
-| | Figma | `#F24E1E` | 브랜드 원본 |
-| | GitHub | `#FFFFFF` | 원본 `#181717`은 어두운 배경에서 보이지 않아 흰색으로 변경 |
+초기안은 사용자의 자기신고("프론트+백엔드+입문 단계")에서 추론했으나, 실제 저장소 21개를 조사하니 어긋났다 — 최다 언어인 TypeScript(7개)가 빠져 있고, 주 언어로 쓰인 적 없는 Python이 들어가 있었다. 실측 분포로 교체했다.
+
+| 행 | 뱃지 | 슬러그 | logoColor | 근거·비고 |
+|---|---|---|---|---|
+| LANGUAGES | TypeScript | `typescript` | `#3178C6` | 저장소 7개 — 최다 |
+| | HTML5 | `html5` | `#E34F26` | 3개 |
+| | Wolfram | `wolfram` | `#DD1100` | 3개 |
+| | C# | `dotnet` | `#512BD4` | 2개. `csharp` 슬러그가 `404`라 .NET 마크로 대체 |
+| | JavaScript | `javascript` | `#F7DF1E` | 2개 |
+| TOOLS | Godot | `godotengine` | `#478CBF` | GDScript 저장소 |
+| | Roblox | `robloxstudio` | `#00A2FF` | Luau 저장소. `roblox`는 `#000000`이라 어두운 배경에서 소실되어 Studio 마크 사용 |
+| | Git | `git` | `#F03C2E` | 브랜드 원본 |
+| | Figma | `figma` | `#F24E1E` | 브랜드 원본 |
+| | GitHub | `github` | `#FFFFFF` | 원본 `#181717`은 어두운 배경에서 보이지 않아 흰색으로 변경 |
 
 **VS Code 제외 사유**: Simple Icons가 Microsoft 상표 정책으로 아이콘을 제거해 `cdn.simpleicons.org/visualstudiocode`가 `404`를 반환한다. **GitHub 로고로 대체**했다. 대체 가능 후보(모두 `200` 확인): Node.js, Docker, TypeScript, Next.js, Tailwind CSS, Notion.
 
@@ -255,3 +259,44 @@ color_dots=#161b22,#3B1F6B,#6B2AB8,#8E2DE2,#00F0FF
 **SMIL 규칙의 예외**: §5.1은 자체 제작 SVG에 SMIL만 쓰도록 정했다. 이 파일은 생성물이며 CSS `@keyframes` 19개로 애니메이션한다. SVG 파일 내부에 포함된 CSS는 GitHub이 그대로 재생하므로 문제없다 — 제거되는 것은 README **본문**의 `<style>`과 `style` 속성이다.
 
 **검증 (2026-08-18)**: 워크플로우 실행 성공 → `output` 브랜치에 `snake.svg` 23,911B 생성 → XML 파싱 통과, `rect` 374개, `<script>` 0개, 지정 색상 6개 전부 적용 → 프로필에서 880×192로 로드 확인.
+
+## 12. 언어 분포 차트 (추가 구현)
+
+공개 저장소의 **언어 바이트 수**를 합산해 GitHub 자체 언어바와 같은 기준으로 그린다. 저장소 개수가 아니라 바이트 기준이라 보조 언어까지 반영된다.
+
+| 항목 | 값 |
+|---|---|
+| 생성기 | `.github/scripts/gen-languages.py` (표준 라이브러리만 — 워크플로우에 설치 단계 불필요) |
+| 워크플로우 | `.github/workflows/languages.yml`, 매주 월요일 + 수동 |
+| 산출물 | `assets/languages.svg` |
+| 데이터 | `/repos/{owner}/{repo}/languages` 합산, 포크·아카이브 제외 |
+| 표시 | 상위 6종 + `Other`, 누적 막대 + 범례 |
+| 색상 | GitHub linguist 색상 (로고에 브랜드 색을 쓴 것과 같은 이유 — 이미 통용되는 색을 따른다) |
+| 애니메이션 | 막대가 좌→우로 채워지고 범례가 순차 등장. 8초 주기로 다른 SVG와 통일 |
+
+**서드파티 없음**: 액션을 쓰지 않고 저장소 안의 스크립트만 돌린다.
+
+**한계**: Actions의 `GITHUB_TOKEN`은 저장소 범위라 **비공개 저장소를 볼 수 없다.** 따라서 공개 저장소 기준이며, 라벨도 `PUBLIC REPOSITORIES BY LANGUAGE`로 명시했다. 전체를 포함하려면 사용자 범위 PAT를 시크릿으로 등록해야 한다.
+
+**실측 (2026-08-18)**: 총 1,595,635바이트 / 9종 — C# 57.7%, TypeScript 22.8%, GDScript 14.6%, CSS 2.0%, Wolfram 1.0%, PLpgSQL 1.0%, Other 0.9%.
+
+## 13. 3D 잔디 그래프 (추가 구현)
+
+| 항목 | 값 |
+|---|---|
+| 액션 | `yoshi389111/github-profile-3d-contrib@latest` |
+| 워크플로우 | `.github/workflows/contrib-3d.yml`, 매일 + 수동 |
+| 산출물 | `profile-3d-contrib/` 아래 10종 변형 |
+| 채택 | `profile-night-green.svg` |
+
+**변형 선택 근거**: 생성되는 10종 중 `night` 계열만 밝은 글자색(`#eeeeff`, `#aaaaaa`)을 쓴다. 나머지는 어두운 글자라 우리 다크 배경에서 읽히지 않는다. 배경이 투명이라 GitHub 다크 테마에 그대로 얹힌다. 나머지 9종도 저장소에 남으므로 README의 파일명 한 단어만 바꾸면 교체된다.
+
+## 14. 향후 여지
+
+| 항목 | 내용 |
+|---|---|
+| **비공개 기여 공개** | Settings → Profile → Contribution settings에서 활성화하면 잔디가 63 → 약 403으로 늘어난다. 뱀·3D 그래프가 훨씬 조밀해진다. 저장소명·커밋 메시지·코드는 노출되지 않는다 |
+| 언어 차트 전체 범위 | 사용자 범위 PAT를 시크릿으로 등록하면 비공개 저장소까지 집계 가능 |
+| 통계 위젯 | §7 주석 블록. 서비스가 `503`인 상태 |
+| 티커 여백 | 텍스트 실측 651.5px vs 간격 980px → 328.5px 공백 |
+| 라이트모드 | 현재 다크 고정 |
