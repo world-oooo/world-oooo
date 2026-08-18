@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 26" role="presentation">
-  <rect width="760" height="26" fill="#0D1117"/>
-  <path d="M0 13 H300 l14 -9 l13 18 l13 -22 l14 26 l13 -13 H760" fill="none" stroke="#30363d" stroke-width="1.6"/>
-  <path d="M0 13 H300 l14 -9 l13 18 l13 -22 l14 26 l13 -13 H760" fill="none" stroke="#00FF41" stroke-width="1.8" stroke-dasharray="90 860" stroke-linecap="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 30" role="presentation">
+  <rect width="760" height="30" fill="#0D1117"/>
+  <path d="M0 15 H300 l14 -9 l13 18 l13 -22 l14 26 l13 -13 H760" fill="none" stroke="#30363d" stroke-width="1.6"/>
+  <path d="M0 15 H300 l14 -9 l13 18 l13 -22 l14 26 l13 -13 H760" fill="none" stroke="#00FF41" stroke-width="1.8" stroke-dasharray="90 860" stroke-linecap="round">
     <animate attributeName="stroke-dashoffset" values="950;0" dur="3.4s" repeatCount="indefinite"/>
   </path>
 </svg>
