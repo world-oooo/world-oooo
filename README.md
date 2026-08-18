@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/header.svg" width="100%" alt="World525">
+<img src="assets/header.svg" width="100%" alt="world-oooo">
 
 <img src="assets/divider.svg" width="100%" alt="">
 
@@ -15,7 +15,7 @@
 
 <img src="assets/pulse.svg" width="100%" alt="">
 
-<img src="https://komarev.com/ghpvc/?username=World525&style=flat-square&color=8E2DE2&label=visitors" alt="방문자 수">
+<img src="https://komarev.com/ghpvc/?username=world-oooo&style=flat-square&color=8E2DE2&label=visitors" alt="방문자 수">
 
 <!--
   📊 통계 위젯 안내
@@ -35,11 +35,11 @@
 
 <!-- STATS-BLOCK — 이 줄과 맨 아래 닫는 줄을 지우면 통계 위젯이 켜집니다
 
-<img src="https://github-readme-stats.vercel.app/api?username=World525&show_icons=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=00F0FF&text_color=c9d1d9" alt="GitHub 통계">
+<img src="https://github-readme-stats.vercel.app/api?username=world-oooo&show_icons=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=00F0FF&text_color=c9d1d9" alt="GitHub 통계">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=World525&layout=compact&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=c9d1d9" alt="많이 쓴 언어">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=world-oooo&layout=compact&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=c9d1d9" alt="많이 쓴 언어">
 
-<img src="https://streak-stats.demolab.com/?user=World525&hide_border=true&background=0D1117&ring=A855F7&fire=00F0FF&currStreakLabel=c9d1d9" alt="연속 커밋">
+<img src="https://streak-stats.demolab.com/?user=world-oooo&hide_border=true&background=0D1117&ring=A855F7&fire=00F0FF&currStreakLabel=c9d1d9" alt="연속 커밋">
 
 -->
 

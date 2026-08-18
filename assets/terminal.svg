@@ -18,13 +18,13 @@
   <circle cx="40" cy="35" r="6" fill="#ff5f56"/>
   <circle cx="60" cy="35" r="6" fill="#ffbd2e"/>
   <circle cx="80" cy="35" r="6" fill="#27c93f"/>
-  <text x="102" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#8b949e">world525@github: ~</text>
+  <text x="102" y="40" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" fill="#8b949e">world-oooo@github: ~</text>
   <g clip-path="url(#line1)">
     <text x="44" y="79" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#e6edf3"><tspan fill="#00FF41">$</tspan> whoami</text>
   </g>
   <g opacity="0">
     <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.14;0.16;0.98;1" dur="8s" repeatCount="indefinite"/>
-    <text x="44" y="105" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#A855F7">World525</text>
+    <text x="44" y="105" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#A855F7">world-oooo</text>
   </g>
   <g clip-path="url(#line3)">
     <text x="44" y="143" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#e6edf3"><tspan fill="#00FF41">$</tspan> cat status.txt</text>

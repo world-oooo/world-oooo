@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" role="img" aria-label="World525">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" role="img" aria-label="world-oooo">
   <defs>
     <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="60" y2="0">
       <stop offset="0" stop-color="#8E2DE2"/>
@@ -35,7 +35,7 @@
       <animate attributeName="opacity" values="0;0.6;0" dur="6.5s" begin="4.2s" repeatCount="indefinite"/>
     </circle>
   </g>
-  <text x="380" y="95" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="54" font-weight="700" fill="url(#sweep)" filter="url(#glow)">World525</text>
+  <text x="380" y="95" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="54" font-weight="700" fill="url(#sweep)" filter="url(#glow)">world-oooo</text>
   <text x="380" y="132" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#8b949e" letter-spacing="3.5">code &#183; build &#183; learn
     <animate attributeName="opacity" values="0.45;1;0.45" dur="3.5s" repeatCount="indefinite"/>
   </text>
