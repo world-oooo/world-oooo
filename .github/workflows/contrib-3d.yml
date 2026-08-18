@@ -1,0 +1,35 @@
+name: Generate 3D contribution graph
+
+# 잔디를 아이소메트릭 3D로 렌더링한 SVG를 만들어 저장소에 커밋한다.
+# 뱀(snake.yml)과 같은 구조 — 외부 런타임 의존 없이 저장소 안의 파일로 남는다.
+
+on:
+  schedule:
+    - cron: "30 18 * * *"   # 매일 1회
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+
+      - name: Commit generated graphs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A profile-3d-contrib
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "Regenerate 3D contribution graph"
+            git push
+          fi
