@@ -11,11 +11,15 @@
 
 <img src="assets/ticker.svg" width="100%" alt="building things / learning in public / one commit at a time / still curious">
 
-<img src="assets/stack.svg" width="100%" alt="기술 스택: HTML5, CSS3, JavaScript, React, Python, Git, Figma, GitHub">
+<img src="assets/stack.svg" width="100%" alt="기술 스택: TypeScript, HTML5, Wolfram, C#, JavaScript, Godot, Roblox, Git, Figma, GitHub">
+
+<img src="assets/languages.svg" width="100%" alt="공개 저장소 언어 분포">
 
 <img src="assets/pulse.svg" width="100%" alt="">
 
 <img src="https://raw.githubusercontent.com/world-oooo/world-oooo/output/snake.svg" width="100%" alt="컨트리뷰션 그리드를 먹으며 지나가는 뱀">
+
+<img src="profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D 아이소메트릭 컨트리뷰션 그래프">
 
 <img src="https://komarev.com/ghpvc/?username=world-oooo&style=flat-square&color=8E2DE2&label=visitors" alt="방문자 수">
 
