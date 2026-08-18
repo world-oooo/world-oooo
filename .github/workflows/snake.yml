@@ -1,0 +1,37 @@
+name: Generate snake animation
+
+# 잔디(컨트리뷰션 그리드)를 먹으며 지나가는 뱀 SVG를 생성해 output 브랜치에 올린다.
+# README는 그 브랜치의 raw URL을 참조한다.
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"   # 12시간마다 갱신
+  workflow_dispatch:          # 수동 실행
+  push:
+    branches: [main]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      # 색상은 프로필 팔레트에 맞춤:
+      #   빈 칸 #161b22 → 보라 램프 → 시안 #00F0FF, 뱀은 터미널 그린 #00FF41
+      - name: Generate snake from contribution grid
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg?color_snake=#00FF41&color_dots=#161b22,#3B1F6B,#6B2AB8,#8E2DE2,#00F0FF
+
+      # 서드파티 배포 액션 대신 git으로 직접 push (의존성 축소)
+      - name: Push to output branch
+        run: |
+          cd dist
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Generated snake animation"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:output
