@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 40" role="img" aria-label="상태">
+  <defs>
+    <clipPath id="clip"><rect width="760" height="40"/></clipPath>
+    <linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="0" x2="760">
+      <stop offset="0" stop-color="#0D1117" stop-opacity="1"/>
+      <stop offset="0.08" stop-color="#0D1117" stop-opacity="0"/>
+      <stop offset="0.92" stop-color="#0D1117" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0D1117" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="40" fill="#0D1117"/>
+  <g clip-path="url(#clip)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="-980 0" dur="16s" repeatCount="indefinite"/>
+      <text x="0" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#8b949e"><tspan fill="#00FF41">&gt;</tspan> building things <tspan fill="#30363d">/</tspan> learning in public <tspan fill="#30363d">/</tspan> one commit at a time <tspan fill="#30363d">/</tspan> still curious <tspan fill="#30363d">/</tspan></text>
+      <text x="980" y="26" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="15" fill="#8b949e"><tspan fill="#00FF41">&gt;</tspan> building things <tspan fill="#30363d">/</tspan> learning in public <tspan fill="#30363d">/</tspan> one commit at a time <tspan fill="#30363d">/</tspan> still curious <tspan fill="#30363d">/</tspan></text>
+    </g>
+  </g>
+  <rect width="760" height="40" fill="url(#fade)"/>
+</svg>
