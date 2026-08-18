@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 185" role="img" aria-label="World525">
+  <defs>
+    <linearGradient id="sweep" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="60" y2="0">
+      <stop offset="0" stop-color="#8E2DE2"/>
+      <stop offset="0.5" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#8E2DE2"/>
+      <animate attributeName="x1" values="-300;760" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="60;1120" dur="4.5s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="760" height="185" fill="#0D1117"/>
+  <g fill="#00F0FF">
+    <circle cx="88" cy="185" r="2">
+      <animate attributeName="cy" values="190;15" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="215" cy="185" r="1.6">
+      <animate attributeName="cy" values="190;15" dur="9s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="9s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="520" cy="185" r="1.5" fill="#A855F7">
+      <animate attributeName="cy" values="190;15" dur="10s" begin="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0" dur="10s" begin="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="185" r="2.2" fill="#A855F7">
+      <animate attributeName="cy" values="190;15" dur="8s" begin="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.7;0" dur="8s" begin="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="185" r="1.7">
+      <animate attributeName="cy" values="190;15" dur="6.5s" begin="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="6.5s" begin="4.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <text x="380" y="95" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="54" font-weight="700" fill="url(#sweep)" filter="url(#glow)">World525</text>
+  <text x="380" y="132" text-anchor="middle" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="14" fill="#8b949e" letter-spacing="3.5">code &#183; build &#183; learn
+    <animate attributeName="opacity" values="0.45;1;0.45" dur="3.5s" repeatCount="indefinite"/>
+  </text>
+</svg>
