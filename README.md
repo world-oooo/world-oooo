@@ -15,6 +15,8 @@
 
 <img src="assets/pulse.svg" width="100%" alt="">
 
+<img src="https://raw.githubusercontent.com/world-oooo/world-oooo/output/snake.svg" width="100%" alt="컨트리뷰션 그리드를 먹으며 지나가는 뱀">
+
 <img src="https://komarev.com/ghpvc/?username=world-oooo&style=flat-square&color=8E2DE2&label=visitors" alt="방문자 수">
 
 <!--
