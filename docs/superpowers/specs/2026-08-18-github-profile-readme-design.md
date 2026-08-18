@@ -52,10 +52,21 @@ github꾸미기/                          ← git 저장소 (원격: world-oooo/
 │  ├─ divider.svg                     ← 흐르는 구분선
 │  ├─ terminal.svg                    ← 터미널 창
 │  ├─ ticker.svg                      ← 상태 티커
-│  ├─ stack.svg                       ← 기술 뱃지 8종
-│  └─ pulse.svg                       ← 심전도 구분선
-├─ docs/superpowers/specs/
-│  └─ 2026-08-18-github-profile-readme-design.md
+│  ├─ stack.svg                       ← 기술 뱃지 10종
+│  ├─ pulse.svg                       ← 심전도 구분선
+│  └─ languages.svg                   ← 언어 분포 차트 (§12, 생성물)
+├─ profile-3d-contrib/                ← 3D 잔디 그래프 10종 (§13, 생성물)
+├─ .github/
+│  ├─ workflows/
+│  │  ├─ snake.yml                    ← 뱀 애니메이션 (§11)
+│  │  ├─ contrib-3d.yml               ← 3D 잔디 그래프 (§13)
+│  │  └─ languages.yml                ← 언어 분포 차트 (§12)
+│  └─ scripts/
+│     └─ gen-languages.py             ← 언어 차트 생성기 (§12)
+├─ docs/superpowers/
+│  ├─ specs/2026-08-18-github-profile-readme-design.md
+│  └─ plans/2026-08-18-github-profile-readme.md
+├─ .gitattributes                     ← 텍스트 파일 LF 고정
 └─ .gitignore                         ← .superpowers/ 제외
 ```
 
@@ -74,12 +85,15 @@ github꾸미기/                          ← git 저장소 (원격: world-oooo/
 | 5 | 상태 티커 | `assets/ticker.svg` | ✅ | 없음 |
 | 6 | 기술 뱃지 | `assets/stack.svg` | ✅ | 없음 |
 | 7 | 심전도 구분선 | `assets/pulse.svg` | ✅ | 없음 |
-| 8 | 방문자 카운터 | komarev | — | 외부 |
-| 9 | 푸터 웨이브 | capsule-render | ✅ | 외부 |
+| 8 | 언어 분포 차트 | `assets/languages.svg` | ✅ | 없음 (§12) |
+| 9 | 컨트리뷰션 뱀 | `output` 브랜치 `snake.svg` | ✅ | 없음 (§11) |
+| 10 | 3D 잔디 그래프 | `profile-3d-contrib/profile-night-green.svg` | ✅ | 없음 (§13) |
+| 11 | 방문자 카운터 | komarev | — | 외부 |
+| 12 | 푸터 웨이브 | capsule-render | ✅ | 외부 |
 
 블록 11과 12 사이에 **통계 위젯 주석 블록**(§7)이 위치한다.
 
-**외부 의존은 komarev와 capsule-render 두 개뿐이다.** 둘 다 실패해도 README의 뼈대(헤더·터미널·뱃지)는 그대로 유지된다.
+**외부 의존은 여전히 komarev와 capsule-render 두 개뿐이다.** 추가된 세 요소(뱀·언어 차트·3D 그래프)는 모두 Actions가 생성해 저장소에 남기므로 렌더링 시점의 외부 의존이 없다. 둘 다 실패해도 README의 뼈대(헤더·터미널·뱃지)는 그대로 유지된다.
 
 ### 5.1 자체 제작 SVG 공통 규칙
 
