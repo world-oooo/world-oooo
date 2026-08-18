@@ -1,7 +1,10 @@
-# GitHub 프로필 README 설계 — World525
+# GitHub 프로필 README 설계 — world-oooo
 
 작성일: 2026-08-18
-대상 계정: [`World525`](https://github.com/World525) (표기 주의 — 대문자 `W`)
+대상 계정: [`world-oooo`](https://github.com/world-oooo)
+프로필: <https://github.com/world-oooo>  ·  저장소: <https://github.com/world-oooo/world-oooo>
+
+> 최초 설계는 `World525`를 대상으로 했다. 그 계정은 2017년에 만든 뒤 사용하지 않은 계정이었고, 실제 사용 계정은 `world-oooo`임이 뒤늦게 확인되어 전환했다 — §3, §11 참조.
 미리보기: <https://claude.ai/code/artifact/1ed9706c-333b-462b-9787-7e964d1b5b23>
 
 ## 1. 배경과 목적
@@ -27,7 +30,7 @@
 | 라이트모드 | **대응하지 않음** (다크 고정) | `<picture>` 분기 시 에셋 2배. 개인용이며 개발자 다수가 다크모드 사용 |
 | 언어 | 본문 한국어, SVG 내부 영문 | 모노스페이스 폰트에서 한글 자간이 불안정 |
 
-## 3. 계정 현황 (2026-08-18 확인)
+## 3. 계정 현황 — `World525` 기준 (2026-08-18 확인, 이후 전환됨)
 
 ```
 공개 저장소: 0     팔로워: 0     기존 프로필 README: 없음     bio: 없음     잔디 활동: 없음
@@ -39,10 +42,10 @@ GitHub 데이터에 의존하는 위젯(통계·스트릭·트로피·활동 그
 
 ## 4. 파일 구조
 
-작업 폴더 `github꾸미기/`를 그대로 git 저장소로 사용하고, 원격 저장소 `World525/World525`에 push한다.
+작업 폴더 `github꾸미기/`를 그대로 git 저장소로 사용하고, 원격 저장소 `world-oooo/world-oooo`에 push한다.
 
 ```
-github꾸미기/                          ← git 저장소 (원격: World525/World525)
+github꾸미기/                          ← git 저장소 (원격: world-oooo/world-oooo)
 ├─ README.md                          ← 프로필 본문
 ├─ assets/
 │  ├─ header.svg                      ← 히어로 헤더
@@ -82,7 +85,7 @@ github꾸미기/                          ← git 저장소 (원격: World525/Wo
 
 **자체 제작하는 이유**: GitHub은 README의 HTML을 필터링하며 `style` 속성과 `<style>`·`<script>` 태그를 제거한다. 허용 속성은 `href, src, title, alt, width, height, align, target, lang` 등으로 제한된다. 따라서 터미널 창이나 애니메이션 뱃지를 HTML/CSS로 구현할 수 없다. 반면 **저장소에 커밋한 SVG 파일은 내부 애니메이션을 포함한 채 상대경로로 렌더링된다.**
 
-**보라가 두 종류인 이유**: `#8E2DE2`는 시안 `#00F0FF`와 짝을 이루는 **그라데이션 양 끝점** 전용이다(`header.svg` 이름 스윕, `divider.svg` 바탕선, 방문자 카운터, 푸터 웨이브). `#A855F7`는 단색으로 칠하는 **강조색**이다(`header.svg` 입자, 터미널의 `World525` 출력, Python·Figma 로고 색). 그라데이션에서 `#A855F7`은 시안과 대비가 약해 띠가 흐릿해지므로 더 진한 `#8E2DE2`를 쓴다.
+**보라가 두 종류인 이유**: `#8E2DE2`는 시안 `#00F0FF`와 짝을 이루는 **그라데이션 양 끝점** 전용이다(`header.svg` 이름 스윕, `divider.svg` 바탕선, 방문자 카운터, 푸터 웨이브). `#A855F7`는 단색으로 칠하는 **강조색**이다(`header.svg` 입자, 터미널의 `world-oooo` 출력, Python·Figma 로고 색). 그라데이션에서 `#A855F7`은 시안과 대비가 약해 띠가 흐릿해지므로 더 진한 `#8E2DE2`를 쓴다.
 
 모든 자체 SVG는 다음을 지킨다:
 
@@ -108,7 +111,7 @@ github꾸미기/                          ← git 저장소 (원격: World525/Wo
 | 시점 | 내용 | 색 |
 |---|---|---|
 | 0.0–0.8s | `$ whoami` 타이핑 | `$`=그린, 명령=`#e6edf3` |
-| 1.2s | `World525` 출력 | `#A855F7` |
+| 1.2s | `world-oooo` 출력 | `#A855F7` |
 | 1.8–3.2s | `$ cat status.txt` 타이핑 | 동일 |
 | 3.6s | `still learning. still building.` | `#8b949e` |
 | 4.4s~ | `$` + 커서 블록 깜빡임(1.1초 주기) | 커서=`#00F0FF` |
