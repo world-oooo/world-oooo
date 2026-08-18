@@ -1,0 +1,4 @@
+# 줄바꿈을 LF로 고정 — Windows의 core.autocrlf 로 인한 작업트리 변환 방지
+*.md   text eol=lf
+*.svg  text eol=lf
+*.sh   text eol=lf
